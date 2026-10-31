@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gigichachua.github.io/sitemap.xml

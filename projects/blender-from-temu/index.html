@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('theme');
+                var theme = saved === 'light' || saved === 'dark'
+                    ? saved
+                    : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) { }
+        })();
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- scripts/prerender-routes.mjs fills these in for each page at build time. -->
+    <title>BlenderFromTemu — Gigi Chachua</title>
+    <link rel="canonical" href="https://gigichachua.github.io/projects/blender-from-temu/" />
+    <meta name="description" content="Blender-inspired mesh editor built from scratch in pure C and modern OpenGL." />
+    <meta name="theme-color" content="#0d1117" />
+
+    <meta property="og:site_name" content="Gigi Chachua" />
+    <meta property="og:title" content="BlenderFromTemu — Gigi Chachua" />
+    <meta property="og:description" content="Blender-inspired mesh editor built from scratch in pure C and modern OpenGL." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gigichachua.github.io/projects/blender-from-temu/" />
+    <meta property="og:image" content="https://gigichachua.github.io/images/blender-from-temu-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+  <script type="module" crossorigin src="/assets/index-x-A6BBbb.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-ChS9zeT0.css">
+</head>
+<body>
+    <a href="#app" class="skip-link">Skip to content</a>
+    <div id="app"></div>
+</body>
+</html>
