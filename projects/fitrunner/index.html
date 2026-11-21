@@ -1,42 +1,101 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <script>
-        (function () {
-            try {
-                var saved = localStorage.getItem('theme');
-                var theme = saved === 'light' || saved === 'dark'
-                    ? saved
-                    : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-
-                document.documentElement.setAttribute('data-theme', theme);
-            } catch (e) { }
-        })();
-    </script>
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <!-- scripts/prerender-routes.mjs fills these in for each page at build time. -->
-    <title>FitRunner — Gigi Chachua</title>
-    <link rel="canonical" href="https://gigichachua.github.io/projects/fitrunner/" />
-    <meta name="description" content="Camera-controlled fitness runner where a phone recognizes body movement and sends gameplay commands to a separate host over the local network." />
-    <meta name="theme-color" content="#0d1117" />
-
-    <meta property="og:site_name" content="Gigi Chachua" />
-    <meta property="og:title" content="FitRunner — Gigi Chachua" />
-    <meta property="og:description" content="Camera-controlled fitness runner where a phone recognizes body movement and sends gameplay commands to a separate host over the local network." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://gigichachua.github.io/projects/fitrunner/" />
-    <meta property="og:image" content="https://gigichachua.github.io/images/fitrunner-gameplay.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-  <script type="module" crossorigin src="/assets/index-x-A6BBbb.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-ChS9zeT0.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FitRunner | Gigi Chachua</title>
+    <meta name="description" content="Fitness runner you play with your body: a PC webcam or a phone camera tracks you as you run, jump, crouch, and steer.">
+    <link rel="canonical" href="https://gigichachua.github.io/projects/fitrunner/">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta property="og:site_name" content="Gigi Chachua">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FitRunner | Gigi Chachua">
+    <meta property="og:description" content="Fitness runner you play with your body: a PC webcam or a phone camera tracks you as you run, jump, crouch, and steer.">
+    <meta property="og:url" content="https://gigichachua.github.io/projects/fitrunner/">
+    <meta property="og:image" content="https://gigichachua.github.io/images/fitrunner-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/assets/site.7832323e.css">
+    <script defer src="/assets/site.1ac40f3d.js"></script>
 </head>
 <body>
-    <a href="#app" class="skip-link">Skip to content</a>
-    <div id="app"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <p class="site-id"><a class="site-name" href="/">Gigi Chachua</a> <span class="site-role">Gameplay and Applied AI Developer</span></p>
+        <nav aria-label="Main">
+            <a href="/#projects">Projects</a>
+            <a href="/#about">About</a>
+            <a href="/#contact">Contact</a>
+            <a href="/#cv">CV</a>
+        </nav>
+    </header>
+    <main id="main">
+
+        <article class="project">
+            <p class="back"><a href="/#projects">All projects</a></p>
+            <header>
+                <h1>FitRunner</h1>
+                <p class="lede">Fitness runner you play with your body: a PC webcam or a phone camera tracks you as you run, jump, crouch, and steer.</p>
+            </header>
+            
+            <div class="video" data-video="/media/fitrunner-demo.mp4" data-title="A run of the FitRunner forest course, played with a phone as the camera">
+                <a class="video__start" href="/media/fitrunner-demo.mp4">
+                    <img src="/images/fitrunner-cover.jpg" alt="" width="1600" height="900" decoding="async">
+                    <span class="video__button" aria-hidden="true"></span>
+                    <span class="video__length" aria-hidden="true">0:50</span>
+                    <span class="visually-hidden">Play video: A run of the FitRunner forest course, played with a phone as the camera, 0:50</span>
+                </a>
+            </div>
+            
+            <p class="project__link">
+                <a href="https://drive.google.com/drive/folders/1EAktrNz57s6VOIJJt9sA8o4lFdt651-4">Playtest builds on Google Drive</a>
+                <span class="note">Version 0.2.0 for Windows, Android, and iOS. The Windows build is about 750 MB. Start with Readme.txt.</span>
+            </p>
+            <div class="project__body">
+                <dl class="facts project__facts">
+                    <div><dt>Year</dt><dd>2026</dd></div>
+                    
+                    <div><dt>Team</dt><dd>Solo</dd></div>
+                    <div><dt>Started</dt><dd>July 2026</dd></div>
+                    <div>
+                        <dt>Built with</dt>
+                        <dd>
+                            <ul class="bare-list">
+                                <li>Unity</li><li>C#</li><li>MediaPipe</li><li>Computer Vision</li><li>TCP/UDP Networking</li><li>Windows, Android, and iOS</li>
+                            </ul>
+                        </dd>
+                    </div>
+                </dl>
+                <div class="prose">
+                    <p>I am building FitRunner. You jog in place, jump, crouch, and step sideways in front of a camera, and the runner on screen does the same. Pose tracking runs with MediaPipe on the device that has the camera, and only movement data and commands are sent to the game, never video.</p>
+<p>Normal mode uses jogging in place to set the runner&#39;s pace, and pumping your arms makes it faster. Easy mode runs automatically, so the player only has to dodge. The game has a 991 m authored forest course and an endless mode built from pooled track segments. A voiced tutorial teaches the moves on the first run, and coins collected along the way unlock characters.</p>
+<p>The hardest problems have been latency and accuracy. Sideways movement uses short prediction from timestamped pose samples and corrects itself as new samples arrive. I log play sessions as pose data, more than 50 recordings so far, and tune the jump, pace, and steering detectors by replaying selected runs through them. One example: a sideways step used to stop the runner in 38 of 185 steps, and after a fix, replayed on the same recordings, 12 still do.</p>
+<p>Version 0.2.0 is out for playtesting. The Windows app plays with the PC&#39;s own camera, or with a phone as the camera. The phone finds the PC on the local network, pairs by code or QR, and reconnects if the connection drops. There are also early builds of the whole game for Android and iOS phones and tablets.</p>
+<p>I direct AI coding agents for much of the code. The architecture and design decisions, device testing, and recordings are mine, and so are the course route, obstacles, and bridges, built on terrain and scenery I migrated into Unity from the Dreamscape Fab pack. Characters and animations come from free packs. The project has over 2,500 automated tests, and the motion code is also checked by replays of recorded sessions.</p>
+<p>The video shows a run of the forest course, recorded just before version 0.2.0, with a phone as the camera and the game on a budget laptop (Ryzen 5, RTX 2050).</p>
+                </div>
+            </div>
+            
+            <div class="gallery gallery--3">
+                
+                <a href="/images/fitrunner-camera.jpg"><img src="/images/fitrunner-camera.jpg" alt="The phone camera view, with the tracked body points drawn over the player" width="1600" height="900" loading="lazy" decoding="async"></a>
+                <a href="/images/fitrunner-course.jpg"><img src="/images/fitrunner-course.jpg" alt="The runner collecting coins on a stone bridge" width="1600" height="900" loading="lazy" decoding="async"></a>
+                <a href="/images/fitrunner-finish.jpg"><img src="/images/fitrunner-finish.jpg" alt="The results screen after a 988 m run" width="1600" height="900" loading="lazy" decoding="async"></a>
+            </div>
+            <nav class="pager" aria-label="More projects">
+                <a href="/projects/war-thunder-ml-ai/">Next project: Tank Combat + ML AI</a>
+                <a href="/#projects">All projects</a>
+            </nav>
+        </article>
+    </main>
+    <footer class="site-footer">
+        <p>© 2026 Gigi Chachua</p>
+        <p>
+            <a href="mailto:gigichachua37@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/gigi-chachua-bb526522b/">LinkedIn</a>
+        </p>
+    </footer>
+    
 </body>
 </html>

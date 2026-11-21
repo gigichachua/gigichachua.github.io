@@ -1,42 +1,91 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <script>
-        (function () {
-            try {
-                var saved = localStorage.getItem('theme');
-                var theme = saved === 'light' || saved === 'dark'
-                    ? saved
-                    : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-
-                document.documentElement.setAttribute('data-theme', theme);
-            } catch (e) { }
-        })();
-    </script>
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <!-- scripts/prerender-routes.mjs fills these in for each page at build time. -->
-    <title>Tank Combat + ML AI — Gigi Chachua</title>
-    <link rel="canonical" href="https://gigichachua.github.io/projects/war-thunder-ml-ai/" />
-    <meta name="description" content="UE5 tank project with multiple tank types, projectile-based combat, scripted bots, and a PyTorch imitation model, with reinforcement learning being rebuilt." />
-    <meta name="theme-color" content="#0d1117" />
-
-    <meta property="og:site_name" content="Gigi Chachua" />
-    <meta property="og:title" content="Tank Combat + ML AI — Gigi Chachua" />
-    <meta property="og:description" content="UE5 tank project with multiple tank types, projectile-based combat, scripted bots, and a PyTorch imitation model, with reinforcement learning being rebuilt." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://gigichachua.github.io/projects/war-thunder-ml-ai/" />
-    <meta property="og:image" content="https://gigichachua.github.io/images/war-thunder-cover.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-  <script type="module" crossorigin src="/assets/index-x-A6BBbb.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-ChS9zeT0.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tank Combat + ML AI | Gigi Chachua</title>
+    <meta name="description" content="UE5 tank project with multiple tank types, projectile-based combat, scripted bots, and a PyTorch imitation model, with reinforcement learning being rebuilt.">
+    <link rel="canonical" href="https://gigichachua.github.io/projects/war-thunder-ml-ai/">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta property="og:site_name" content="Gigi Chachua">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tank Combat + ML AI | Gigi Chachua">
+    <meta property="og:description" content="UE5 tank project with multiple tank types, projectile-based combat, scripted bots, and a PyTorch imitation model, with reinforcement learning being rebuilt.">
+    <meta property="og:url" content="https://gigichachua.github.io/projects/war-thunder-ml-ai/">
+    <meta property="og:image" content="https://gigichachua.github.io/images/war-thunder-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/assets/site.7832323e.css">
+    <script defer src="/assets/site.1ac40f3d.js"></script>
 </head>
 <body>
-    <a href="#app" class="skip-link">Skip to content</a>
-    <div id="app"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <p class="site-id"><a class="site-name" href="/">Gigi Chachua</a> <span class="site-role">Gameplay and Applied AI Developer</span></p>
+        <nav aria-label="Main">
+            <a href="/#projects">Projects</a>
+            <a href="/#about">About</a>
+            <a href="/#contact">Contact</a>
+            <a href="/#cv">CV</a>
+        </nav>
+    </header>
+    <main id="main">
+
+        <article class="project">
+            <p class="back"><a href="/#projects">All projects</a></p>
+            <header>
+                <h1>Tank Combat + ML AI</h1>
+                <p class="lede">UE5 tank project with multiple tank types, projectile-based combat, scripted bots, and a PyTorch imitation model, with reinforcement learning being rebuilt.</p>
+            </header>
+            
+            <div class="video" data-embed="https://www.youtube-nocookie.com/embed/tOkkH1JCQPQ?rel=0&amp;modestbranding=1&amp;playsinline=1" data-title="Tank combat and AI gameplay">
+                <a class="video__start" href="https://www.youtube.com/watch?v=tOkkH1JCQPQ">
+                    <img src="/images/war-thunder-cover.jpg" alt="" width="1748" height="982" decoding="async">
+                    <span class="video__button" aria-hidden="true"></span>
+                    <span class="video__length" aria-hidden="true">1:11</span>
+                    <span class="visually-hidden">Play video: Tank combat and AI gameplay, 1:11</span>
+                </a>
+            </div>
+            
+            <div class="project__body">
+                <dl class="facts project__facts">
+                    <div><dt>Year</dt><dd>2025–2026</dd></div>
+                    
+                    <div>
+                        <dt>Built with</dt>
+                        <dd>
+                            <ul class="bare-list">
+                                <li>Unreal Engine 5</li><li>Blueprints</li><li>Python</li><li>PyTorch</li><li>Imitation Learning</li><li>Reinforcement Learning (rebuilding)</li>
+                            </ul>
+                        </dd>
+                    </div>
+                </dl>
+                <div class="prose">
+                    <p>I built this tank project in Unreal Engine 5 as both a playable combat game and a space for machine learning AI experiments.</p>
+<p>The tank pawn, including driving, turret, and weapons, started from a Marketplace tank pack. On top of it I built the AI, the machine learning pipeline, teams, health, scoring, respawning, the HUD and minimap, and the integration of two more tank types with different strengths and weaknesses.</p>
+<p>In an earlier version, since lost, I trained reinforcement learning agents. My first approach let reinforcement learning handle too much of the problem, which led to unstable results. The better solution was a hybrid system: code handled the physics-heavy parts like aiming, while reinforcement learning focused on higher-level combat decisions, and in my own playtests it could beat me. I am rebuilding that training now.</p>
+<p>What survives is a scripted bot with ballistic lead aiming and a PyTorch imitation model. I recorded about a million frames of the bot playing and trained the model on them, and it plays live through a Python server over OSC.</p>
+                </div>
+            </div>
+            
+            <div class="gallery gallery--1">
+                
+                <a href="/images/war-thunder-poster.jpg"><img src="/images/war-thunder-poster.jpg" alt="Tank types" width="1740" height="913" loading="lazy" decoding="async"></a>
+            </div>
+            <nav class="pager" aria-label="More projects">
+                <a href="/projects/blender-from-temu/">Next project: BlenderFromTemu</a>
+                <a href="/#projects">All projects</a>
+            </nav>
+        </article>
+    </main>
+    <footer class="site-footer">
+        <p>© 2026 Gigi Chachua</p>
+        <p>
+            <a href="mailto:gigichachua37@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/gigi-chachua-bb526522b/">LinkedIn</a>
+        </p>
+    </footer>
+    
 </body>
 </html>

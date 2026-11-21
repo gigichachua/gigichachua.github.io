@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://gigichachua.github.io/</loc></url>
-  <url><loc>https://gigichachua.github.io/skills/</loc></url>
-  <url><loc>https://gigichachua.github.io/projects/</loc></url>
-  <url><loc>https://gigichachua.github.io/experience/</loc></url>
-  <url><loc>https://gigichachua.github.io/contact/</loc></url>
   <url><loc>https://gigichachua.github.io/projects/fitrunner/</loc></url>
+  <url><loc>https://gigichachua.github.io/projects/war-thunder-ml-ai/</loc></url>
+  <url><loc>https://gigichachua.github.io/projects/blender-from-temu/</loc></url>
   <url><loc>https://gigichachua.github.io/projects/assassin-systems-prototype/</loc></url>
   <url><loc>https://gigichachua.github.io/projects/singularity/</loc></url>
-  <url><loc>https://gigichachua.github.io/projects/war-thunder-ml-ai/</loc></url>
   <url><loc>https://gigichachua.github.io/projects/vision-controlled-tank/</loc></url>
-  <url><loc>https://gigichachua.github.io/projects/blender-from-temu/</loc></url>
   <url><loc>https://gigichachua.github.io/projects/goat-ate-vineyard/</loc></url>
 </urlset>

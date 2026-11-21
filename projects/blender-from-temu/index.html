@@ -1,42 +1,86 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <script>
-        (function () {
-            try {
-                var saved = localStorage.getItem('theme');
-                var theme = saved === 'light' || saved === 'dark'
-                    ? saved
-                    : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-
-                document.documentElement.setAttribute('data-theme', theme);
-            } catch (e) { }
-        })();
-    </script>
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <!-- scripts/prerender-routes.mjs fills these in for each page at build time. -->
-    <title>BlenderFromTemu — Gigi Chachua</title>
-    <link rel="canonical" href="https://gigichachua.github.io/projects/blender-from-temu/" />
-    <meta name="description" content="Blender-inspired mesh editor built from scratch in pure C and modern OpenGL." />
-    <meta name="theme-color" content="#0d1117" />
-
-    <meta property="og:site_name" content="Gigi Chachua" />
-    <meta property="og:title" content="BlenderFromTemu — Gigi Chachua" />
-    <meta property="og:description" content="Blender-inspired mesh editor built from scratch in pure C and modern OpenGL." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://gigichachua.github.io/projects/blender-from-temu/" />
-    <meta property="og:image" content="https://gigichachua.github.io/images/blender-from-temu-cover.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-  <script type="module" crossorigin src="/assets/index-x-A6BBbb.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-ChS9zeT0.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BlenderFromTemu | Gigi Chachua</title>
+    <meta name="description" content="Blender-inspired mesh editor built from scratch in pure C and modern OpenGL.">
+    <link rel="canonical" href="https://gigichachua.github.io/projects/blender-from-temu/">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta property="og:site_name" content="Gigi Chachua">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BlenderFromTemu | Gigi Chachua">
+    <meta property="og:description" content="Blender-inspired mesh editor built from scratch in pure C and modern OpenGL.">
+    <meta property="og:url" content="https://gigichachua.github.io/projects/blender-from-temu/">
+    <meta property="og:image" content="https://gigichachua.github.io/images/blender-from-temu-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/assets/site.7832323e.css">
+    <script defer src="/assets/site.1ac40f3d.js"></script>
 </head>
 <body>
-    <a href="#app" class="skip-link">Skip to content</a>
-    <div id="app"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <p class="site-id"><a class="site-name" href="/">Gigi Chachua</a> <span class="site-role">Gameplay and Applied AI Developer</span></p>
+        <nav aria-label="Main">
+            <a href="/#projects">Projects</a>
+            <a href="/#about">About</a>
+            <a href="/#contact">Contact</a>
+            <a href="/#cv">CV</a>
+        </nav>
+    </header>
+    <main id="main">
+
+        <article class="project">
+            <p class="back"><a href="/#projects">All projects</a></p>
+            <header>
+                <h1>BlenderFromTemu</h1>
+                <p class="lede">Blender-inspired mesh editor built from scratch in pure C and modern OpenGL.</p>
+            </header>
+            
+            <div class="video" data-embed="https://www.youtube-nocookie.com/embed/uXU-_JYw6Kc?rel=0&amp;modestbranding=1&amp;playsinline=1" data-title="BlenderFromTemu mesh editor">
+                <a class="video__start" href="https://www.youtube.com/watch?v=uXU-_JYw6Kc">
+                    <img src="/images/blender-from-temu-cover.jpg" alt="" width="1777" height="1000" decoding="async">
+                    <span class="video__button" aria-hidden="true"></span>
+                    <span class="video__length" aria-hidden="true">0:50</span>
+                    <span class="visually-hidden">Play video: BlenderFromTemu mesh editor, 0:50</span>
+                </a>
+            </div>
+            
+            <div class="project__body">
+                <dl class="facts project__facts">
+                    <div><dt>Year</dt><dd>2026</dd></div>
+                    
+                    <div>
+                        <dt>Built with</dt>
+                        <dd>
+                            <ul class="bare-list">
+                                <li>C</li><li>OpenGL</li><li>GLFW</li><li>GLAD</li>
+                            </ul>
+                        </dd>
+                    </div>
+                </dl>
+                <div class="prose">
+                    <p>I built this project from scratch in pure C and modern OpenGL to better understand how 3D editors and rendering tools work under the hood.</p>
+<p>Instead of relying on an engine or editor framework, I implemented the core interaction loop myself: selecting vertices by click or box, adding vertices and faces, deleting vertices, moving them with a translate gizmo that has axis lock and snapping, undoing and redoing changes, and saving the results back out as OBJ files.</p>
+<p>Working on it gave me a much better understanding of lower-level graphics programming, mesh editing workflows, and the kind of tooling problems game engines usually hide.</p>
+                </div>
+            </div>
+            
+            <nav class="pager" aria-label="More projects">
+                <a href="/projects/assassin-systems-prototype/">Next project: Assassin-style Systems Prototype</a>
+                <a href="/#projects">All projects</a>
+            </nav>
+        </article>
+    </main>
+    <footer class="site-footer">
+        <p>© 2026 Gigi Chachua</p>
+        <p>
+            <a href="mailto:gigichachua37@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/gigi-chachua-bb526522b/">LinkedIn</a>
+        </p>
+    </footer>
+    
 </body>
 </html>
